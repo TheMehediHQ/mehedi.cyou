@@ -10,7 +10,10 @@
       "Shell(curl -s http://localhost:4321/)",
       "Shell(echo:*)",
       "Shell(npx astro check 2 >& 1)",
-      "Shell(npx astro dev stop 2>&1; echo \"---\"; npx astro dev status 2>&1)"
+      "Shell(npx astro dev stop 2>&1; echo \"---\"; npx astro dev status 2>&1)",
+      "Shell(git:*)",
+      "Shell(git commit -F - <<'EOF' feat: funnier link hub, drop headshot for a small emoji badge - Remove the personal/GitHub avatar image and its fallback asset - Show a small emoji avatar with a witty caption instead - Punch up the profile, link, and ticker copy - Point `site` at https://mehedi.cyou and drop OG/Twitter image tags Co-authored-by: CommandCodeBot <noreply@commandcode.ai> EOF echo \"== log ==\"; git log --oneline -3)",
+      "Shell(git push origin main 2>&1; echo \"== status ==\"; git status -sb | head -1)"
     ],
     "deny": [],
     "defaultMode": "default"

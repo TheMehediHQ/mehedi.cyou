@@ -1,138 +1,95 @@
 /**
  * Single source of truth for the link hub.
- * Edit the arrays below to change the page — no template changes required.
+ * Rebuilt to match the hilarious, neo-brutalist comic UI!
  */
 
 export interface Profile {
   name: string;
+  subname: string;
   handle: string;
-  /** Fun emoji stand-in for a headshot. Swap freely. */
-  emoji: string;
-  emojiCaption: string;
+  avatar: string;
+  status: string;
+  statusSub: string;
   headline: string;
   bio: string;
   location: string;
-  status: string;
 }
 
-export interface LinkItem {
+export interface LinkCardItem {
   id: string;
-  label: string;
+  title: string;
+  subtitle: string;
   url: string;
-  emoji: string;
-  blurb: string;
-  /** Muted accent hex for the small dot next to the label. */
-  tint: string;
-}
-
-export type ProjectStatus = "active" | "beta" | "archived";
-
-export interface ProjectItem {
-  id: string;
-  name: string;
-  description: string;
-  url: string;
-  emoji: string;
-  tags: string[];
-  status: ProjectStatus;
+  icon: string;
+  bg: string;
+  accent: string;
 }
 
 export const profile: Profile = {
   name: "Mehedi Hasan",
+  subname: "(Absolute Legend)",
   handle: "@TheMehediHQ",
-  emoji: "🫠",
-  emojiCaption: "(that's me, artist's rendering)",
-  headline: "Certified Overthinker · Recovering Perfectionist",
+  avatar: "/avatar.png",
+  status: "Online",
+  statusSub: "Probably sleeping 💤",
+  headline: "Full-Stack Developer, Professional Bug Creator, & Part-time Couch Potato.",
   bio: "I turn coffee into bugs, then bugs into features, then features into load-bearing legacy code.",
   location: "somewhere between git commit and git push --force",
-  status: "probably compiling",
 };
 
-export const links: LinkItem[] = [
-  {
-    id: "website",
-    label: "The Website",
-    url: "https://www.mehedi-hasan.me",
-    emoji: "🌐",
-    blurb: "My digital home. Mind the mess.",
-    tint: "#5fd0bd",
-  },
+export const linkCards: LinkCardItem[] = [
   {
     id: "github",
-    label: "GitHub",
+    title: "GitHub (My messy codebase)",
+    subtitle: "Abandon hope, all ye who enter here",
     url: "https://github.com/TheMehediHQ",
-    emoji: "🐙",
-    blurb: "Home to 47 unfinished projects. One even works.",
-    tint: "#8f9bff",
+    icon: "/icon_github.png",
+    bg: "#82e042",
+    accent: "#61bf24",
   },
   {
     id: "linkedin",
-    label: "LinkedIn",
+    title: "Linkedin (The professional lies)",
+    subtitle: "Watch me act like an adult",
     url: "https://www.linkedin.com/in/TheMehediHQ",
-    emoji: "💼",
-    blurb: "The professional version of me. He's lovely.",
-    tint: "#6fb0e6",
+    icon: "/icon_linkedin.png",
+    bg: "#52a5e8",
+    accent: "#388fe3",
   },
   {
-    id: "twitter",
-    label: "Twitter (it's X now)",
-    url: "https://twitter.com/themehedihq",
-    emoji: "🐦",
-    blurb: "Hot takes, cold coffee, questionable follow-through.",
-    tint: "#b09cf2",
-  },
-  {
-    id: "cal",
-    label: "Book 15 Minutes",
+    id: "hire",
+    title: "Hire Me! Please? 🙏",
+    subtitle: "Need money for coffee and server bills",
     url: "https://cal.com/TheMehediHQ/15min",
-    emoji: "📅",
-    blurb: "Book 15 minutes. I'll spend the first 14 debugging.",
-    tint: "#ffb454",
-  },
-];
-
-// Editable placeholders — swap the names/urls for your real repositories.
-export const projects: ProjectItem[] = [
-  {
-    id: "sidequest-os",
-    name: "SidequestOS",
-    description: "An OS for procrastinating productively.",
-    url: "https://github.com/TheMehediHQ",
-    emoji: "🧭",
-    tags: ["TypeScript", "Astro"],
-    status: "active",
+    icon: "/icon_hire.png",
+    bg: "#fd60b1",
+    accent: "#df4083",
   },
   {
-    id: "rubber-duck-gpt",
-    name: "RubberDuckGPT",
-    description: "Explains my code back to me until I feel smart.",
-    url: "https://github.com/TheMehediHQ",
-    emoji: "🦆",
-    tags: ["AI", "CLI"],
-    status: "beta",
+    id: "projects",
+    title: "Stupid Side Projects",
+    subtitle: "They don’t work, but they look cool",
+    url: "https://github.com/TheMehediHQ?tab=repositories",
+    icon: "/icon_projects.png",
+    bg: "#fed61a",
+    accent: "#e2af14",
   },
   {
-    id: "portfolio-v47",
-    name: "Portfolio v47",
-    description: "The previous 46 were fine, actually.",
+    id: "games",
+    title: "My Kids Game (droptop)",
+    subtitle: "Work in heating problem cool",
     url: "https://github.com/TheMehediHQ",
-    emoji: "🗿",
-    tags: ["CSS", "Web"],
-    status: "archived",
+    icon: "/icon_games.png",
+    bg: "#b364e4",
+    accent: "#8e57e0",
   },
   {
-    id: "readme-driven-development",
-    name: "README-Driven Development",
-    description: "Tests are just suggestions.",
-    url: "https://github.com/TheMehediHQ",
-    emoji: "📓",
-    tags: ["Docs"],
-    status: "active",
+    id: "cv",
+    title: "My CV (Fabricated? Maybe.)",
+    subtitle: "100% human-written (mostly)",
+    url: "/cv.pdf",
+    icon: "/icon_cv.png",
+    bg: "#42e796",
+    accent: "#32c47e",
   },
-];
-
-export const tickerLines: string[] = [
-  "Currently shipping, occasionally sleeping",
-  "Open to side quests (no fetch quests)",
-  "Tabs over spaces, and I will not be taking questions",
 ];
