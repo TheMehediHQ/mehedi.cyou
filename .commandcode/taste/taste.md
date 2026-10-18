@@ -4,4 +4,4 @@
 - Prefers Astro for personal web projects (explicitly requested an Astro build). Confidence: 0.6
 - Avoids personal photos/headshots on personal pages — prefers a playful emoji or graphic stand-in for the avatar instead. Confidence: 0.6
 - Prefers Tailwind CSS v4 (via `@tailwindcss/vite`) for styling. Confidence: 0.55
-- Comfortable delegating git operations to the agent — expects it to stage, commit, and push to the remote (origin/main) on request. Confidence: 0.5
+- Comfortable delegating git operations to the agent — expects it to stage, commit, and push to the remote (origin/main) on request, using a terse shorthand like "code commit and push". Confidence: 0.6
