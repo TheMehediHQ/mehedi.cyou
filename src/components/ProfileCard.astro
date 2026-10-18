@@ -1,0 +1,32 @@
+---
+import { profile } from "../data/links";
+---
+
+<header class="flex flex-col items-center gap-4 text-center">
+  <img
+    src={profile.avatar}
+    alt={`Cartoon avatar of ${profile.name}`}
+    width="160"
+    height="160"
+    loading="eager"
+    referrerpolicy="no-referrer"
+    onerror="this.onerror=null;this.src='/avatar-fallback.svg'"
+    class="h-32 w-32 rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] object-cover shadow-lg sm:h-40 sm:w-40"
+  />
+
+  <div class="space-y-2">
+    <h1 class="text-3xl font-semibold sm:text-4xl">{profile.name}</h1>
+    <p class="text-[var(--color-muted)]">{profile.headline}</p>
+  </div>
+
+  <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm text-[var(--color-muted)]">
+    <span class="inline-flex items-center gap-2">
+      <span class="h-2 w-2 rounded-full bg-[var(--color-accent)]" aria-hidden="true"></span>
+      {profile.status}
+    </span>
+    <span class="hidden sm:inline" aria-hidden="true">·</span>
+    <span>{profile.handle}</span>
+  </div>
+
+  <p class="max-w-md text-pretty text-sm text-[var(--color-muted)]">{profile.bio}</p>
+</header>

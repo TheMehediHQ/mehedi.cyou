@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Ticker from "../components/Ticker.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+import LinkCard from "../components/LinkCard.astro";
+import { links, tickerLines, profile } from "../data/links";
+
+const year = new Date().getFullYear();
+---
+
+<BaseLayout title={`${profile.name} — Everything, One Page`} description={profile.headline}>
+  <Ticker lines={tickerLines} />
+
+  <main class="mx-auto flex w-full max-w-xl flex-col gap-12 px-5 py-12 sm:py-16">
+    <div class="animate-fade-up">
+      <ProfileCard />
+    </div>
+
+    <section aria-labelledby="links-heading" class="flex flex-col gap-4">
+      <h2 id="links-heading" class="text-xs font-semibold tracking-widest text-[var(--color-muted)] uppercase">
+        Find me here
+      </h2>
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {
+          links.map((link, i) => (
+            <li class="animate-fade-up" style={{ animationDelay: `${80 + i * 45}ms` }}>
+              <LinkCard link={link} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <footer class="flex flex-col items-center gap-1 pt-4 text-center text-xs text-[var(--color-muted)]">
+      <p>{profile.location}</p>
+      <p>© {year} {profile.name}. Built with Astro, powered by coffee.</p>
+    </footer>
+  </main>
+</BaseLayout>

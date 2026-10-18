@@ -1,0 +1,20 @@
+---
+interface Props {
+  lines: string[];
+  /** Seconds for one full loop. */
+  speed?: number;
+}
+
+const { lines, speed = 48 } = Astro.props;
+const content = `${lines.join("   •   ")}   •   `;
+---
+
+<div
+  class="w-full overflow-hidden border-b border-[var(--color-border)] bg-[var(--color-surface)]/60 py-2 select-none"
+  aria-hidden="true"
+>
+  <div class="ticker-track" style={{ animationDuration: `${speed}s` }}>
+    <span class="ticker-group px-4 text-xs tracking-wide text-[var(--color-muted)]">{content}</span>
+    <span class="ticker-group px-4 text-xs tracking-wide text-[var(--color-muted)]">{content}</span>
+  </div>
+</div>

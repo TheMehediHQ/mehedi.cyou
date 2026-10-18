@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(bash -c 'shopt -s dotglob && mv exotic-event/* . && rmdir exotic-event' && ls -la)",
+      "Shell(npm:*)",
+      "Shell(rm:*)",
+      "Shell(npx astro dev --background 2>&1; echo \"---\"; npx astro dev status 2>&1)",
+      "Shell(agent-browser --version 2>&1; echo \"===\"; agent-browser skills get core 2>&1 | head -120)",
+      "Shell(curl -s -o /dev/null -w %{http_code}\\n http://localhost:4321/)",
+      "Shell(curl -s http://localhost:4321/)",
+      "Shell(echo:*)",
+      "Shell(npx astro check 2 >& 1)",
+      "Shell(npx astro dev stop 2>&1; echo \"---\"; npx astro dev status 2>&1)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

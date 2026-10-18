@@ -1,0 +1,38 @@
+---
+import type { ProjectItem } from "../data/links";
+
+interface Props {
+  project: ProjectItem;
+}
+
+const { project } = Astro.props;
+---
+
+<a
+  href={project.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="card group flex h-full flex-col gap-3 p-4"
+>
+  <div class="flex items-center justify-between gap-2">
+    <span class="text-2xl" aria-hidden="true">{project.emoji}</span>
+    <span class={`badge badge-${project.status}`}>{project.status}</span>
+  </div>
+
+  <div class="space-y-1">
+    <h3 class="font-medium transition-colors group-hover:text-[var(--color-accent)]">{project.name}</h3>
+    <p class="text-sm text-[var(--color-muted)]">{project.description}</p>
+  </div>
+
+  <ul class="mt-auto flex flex-wrap gap-1.5 pt-1">
+    {
+      project.tags.map((tag) => (
+        <li class="rounded-md border border-[var(--color-border)] bg-[var(--color-bg)] px-2 py-0.5 text-xs text-[var(--color-muted)]">
+          {tag}
+        </li>
+      ))
+    }
+  </ul>
+
+  <span class="sr-only">(opens in a new tab)</span>
+</a>
