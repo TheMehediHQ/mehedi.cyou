@@ -4,8 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  // Update to the real deploy URL (affects canonical + Open Graph tags).
-  site: "https://links.mehedi-hasan.me",
+  site: "https://mehedi.cyou",
   vite: {
     plugins: [tailwindcss()],
   },

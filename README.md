@@ -6,7 +6,7 @@ A playful, single-page personal link hub built with [Astro](https://astro.build)
 
 Everything on the page is driven by one file: **`src/data/links.ts`**.
 
-- `profile` — name, handle, headline, bio, avatar
+- `profile` — name, handle, emoji avatar (+ caption), headline, bio
 - `links` — the link buttons (add/remove/reorder objects)
 - `projects` — the project tiles (placeholders — swap in your real repos)
 - `tickerLines` — the scrolling banner text

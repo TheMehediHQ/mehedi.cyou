@@ -6,9 +6,11 @@
 export interface Profile {
   name: string;
   handle: string;
+  /** Fun emoji stand-in for a headshot. Swap freely. */
+  emoji: string;
+  emojiCaption: string;
   headline: string;
   bio: string;
-  avatar: string;
   location: string;
   status: string;
 }
@@ -38,11 +40,12 @@ export interface ProjectItem {
 export const profile: Profile = {
   name: "Mehedi Hasan",
   handle: "@TheMehediHQ",
-  headline: "Professional Overthinker & Occasional Ship-It Engineer",
-  bio: "I write code, break code, then write code about breaking code.",
-  avatar: "https://github.com/TheMehediHQ.png?size=460",
+  emoji: "🫠",
+  emojiCaption: "(that's me, artist's rendering)",
+  headline: "Certified Overthinker · Recovering Perfectionist",
+  bio: "I turn coffee into bugs, then bugs into features, then features into load-bearing legacy code.",
   location: "somewhere between git commit and git push --force",
-  status: "caffeinated",
+  status: "probably compiling",
 };
 
 export const links: LinkItem[] = [
@@ -51,7 +54,7 @@ export const links: LinkItem[] = [
     label: "The Website",
     url: "https://www.mehedi-hasan.me",
     emoji: "🌐",
-    blurb: "My digital home. Plants not included.",
+    blurb: "My digital home. Mind the mess.",
     tint: "#5fd0bd",
   },
   {
@@ -59,7 +62,7 @@ export const links: LinkItem[] = [
     label: "GitHub",
     url: "https://github.com/TheMehediHQ",
     emoji: "🐙",
-    blurb: "Where my unfinished ideas live forever.",
+    blurb: "Home to 47 unfinished projects. One even works.",
     tint: "#8f9bff",
   },
   {
@@ -67,7 +70,7 @@ export const links: LinkItem[] = [
     label: "LinkedIn",
     url: "https://www.linkedin.com/in/TheMehediHQ",
     emoji: "💼",
-    blurb: "For recruiters and my mom.",
+    blurb: "The professional version of me. He's lovely.",
     tint: "#6fb0e6",
   },
   {
@@ -75,7 +78,7 @@ export const links: LinkItem[] = [
     label: "Twitter (it's X now)",
     url: "https://twitter.com/themehedihq",
     emoji: "🐦",
-    blurb: "Hot takes, cold coffee.",
+    blurb: "Hot takes, cold coffee, questionable follow-through.",
     tint: "#b09cf2",
   },
   {
@@ -83,7 +86,7 @@ export const links: LinkItem[] = [
     label: "Book 15 Minutes",
     url: "https://cal.com/TheMehediHQ/15min",
     emoji: "📅",
-    blurb: "15 minutes of your life you won't get back. Book responsibly.",
+    blurb: "Book 15 minutes. I'll spend the first 14 debugging.",
     tint: "#ffb454",
   },
 ];
@@ -130,6 +133,6 @@ export const projects: ProjectItem[] = [
 
 export const tickerLines: string[] = [
   "Currently shipping, occasionally sleeping",
-  "Open to side quests",
+  "Open to side quests (no fetch quests)",
   "Tabs over spaces, and I will not be taking questions",
 ];
