@@ -1,6 +1,7 @@
+
 /**
- * Single source of truth for the link hub.
- * Rebuilt to match the hilarious, neo-brutalist comic UI!
+ * Single source of truth for the personal link hub.
+ * A professional, personality-driven profile with a clean neo-brutalist UI.
  */
 
 export interface Profile {
@@ -30,19 +31,19 @@ export const profile: Profile = {
   subname: "(TheMehediHQ)",
   handle: "@TheMehediHQ",
   avatar: "/avatar.png",
-  status: "Online",
-  statusSub: "Probably sleeping 💤",
+  status: "Available for Opportunities",
+  statusSub: " 🚀",
   headline:
-    "Full-Stack Developer, Professional Bug Creator, & Part-time Couch Potato.",
-  bio: "I turn coffee into bugs, then bugs into features, then features into load-bearing legacy code.",
-  location: "somewhere between git commit and git push --force",
+    "Software Engineer building modern web applications and AI-powered experiences.",
+  bio: "I turn ideas into reliable digital products using JavaScript, TypeScript, React, Next.js, Node.js, and modern web technologies. Occasionally, I turn coffee into code.",
+  location: "Bangladesh 🇧🇩 · Working with people worldwide",
 };
 
 export const linkCards: LinkCardItem[] = [
   {
     id: "github",
-    title: "GitHub (My messy codebase)",
-    subtitle: "Abandon hope, all ye who enter here",
+    title: "GitHub — Open Source & Code",
+    subtitle: "Explore my projects, experiments, and contributions.",
     url: "https://github.com/TheMehediHQ",
     icon: "/icon_github.png",
     bg: "#82e042",
@@ -50,8 +51,8 @@ export const linkCards: LinkCardItem[] = [
   },
   {
     id: "linkedin",
-    title: "Linkedin (The professional lies)",
-    subtitle: "Watch me act like an adult",
+    title: "LinkedIn — Professional Profile",
+    subtitle: "My experience, career journey, and professional updates.",
     url: "https://www.linkedin.com/in/TheMehediHQ",
     icon: "/icon_linkedin.png",
     bg: "#52a5e8",
@@ -59,8 +60,8 @@ export const linkCards: LinkCardItem[] = [
   },
   {
     id: "hire",
-    title: "Hire Me! Please? 🙏",
-    subtitle: "Need money for coffee and server bills",
+    title: "Let's Work Together",
+    subtitle: "Have a project or opportunity? Let's talk.",
     url: "https://cal.com/TheMehediHQ/15min",
     icon: "/icon_hire.png",
     bg: "#fd60b1",
@@ -68,8 +69,8 @@ export const linkCards: LinkCardItem[] = [
   },
   {
     id: "projects",
-    title: "Stupid Side Projects",
-    subtitle: "They don’t work, but they look cool",
+    title: "Projects & Experiments",
+    subtitle: "Real-world applications, side projects, and ideas in progress.",
     url: "https://github.com/TheMehediHQ?tab=repositories",
     icon: "/icon_projects.png",
     bg: "#fed61a",
@@ -77,17 +78,17 @@ export const linkCards: LinkCardItem[] = [
   },
   {
     id: "games",
-    title: "My Kids Game (droptop)",
-    subtitle: "Work in heating problem cool",
-    url: "https://github.com/TheMehediHQ",
+    title: "Side Projects & Creative Builds",
+    subtitle: "Small experiments, creative ideas, and things I'm building.",
+    url: "https://github.com/TheMehediHQ?tab=repositories",
     icon: "/icon_games.png",
     bg: "#b364e4",
     accent: "#8e57e0",
   },
   {
     id: "cv",
-    title: "My CV (Fabricated? Maybe.)",
-    subtitle: "100% human-written (mostly)",
+    title: "Resume — Mehedi Hasan",
+    subtitle: "My technical skills, experience, and professional background.",
     url: "/cv.pdf",
     icon: "/icon_cv.png",
     bg: "#42e796",
