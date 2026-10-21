@@ -28,7 +28,7 @@ export interface LinkCardItem {
 
 export const profile: Profile = {
   name: "Mehedi Hasan",
-  subname: "(TheMehediHQ)",
+  subname: "(@ themehedihq)",
   handle: "@TheMehediHQ",
   avatar: "/avatar.png",
   status: "Available for Opportunities",
