@@ -27,12 +27,13 @@ export interface LinkCardItem {
 
 export const profile: Profile = {
   name: "Mehedi Hasan",
-  subname: "(Absolute Legend)",
+  subname: "(TheMehediHQ)",
   handle: "@TheMehediHQ",
   avatar: "/avatar.png",
   status: "Online",
   statusSub: "Probably sleeping 💤",
-  headline: "Full-Stack Developer, Professional Bug Creator, & Part-time Couch Potato.",
+  headline:
+    "Full-Stack Developer, Professional Bug Creator, & Part-time Couch Potato.",
   bio: "I turn coffee into bugs, then bugs into features, then features into load-bearing legacy code.",
   location: "somewhere between git commit and git push --force",
 };

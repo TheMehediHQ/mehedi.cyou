@@ -11,67 +11,119 @@ const { card, showPointer = false } = Astro.props;
 
 <div class="relative w-full">
   <!-- Directional arrow for this card -->
-  {card.id === "github" && (
-    <div class="hidden md:block absolute -top-8 -left-8 pointer-events-none -rotate-6 z-20">
-      <svg width="45" height="40" viewBox="0 0 50 45" fill="none">
-        <path d="M 6 8 L 32 26 L 24 32 M 32 26 L 36 16" stroke="#82ea38" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-  )}
+  {
+    card.id === "github" && (
+      <div class="hidden md:block absolute -top-8 -left-8 pointer-events-none -rotate-6 z-20">
+        <svg width="45" height="40" viewBox="0 0 50 45" fill="none">
+          <path
+            d="M 6 8 L 32 26 L 24 32 M 32 26 L 36 16"
+            stroke="#82ea38"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    )
+  }
 
-  {card.id === "linkedin" && (
-    <div class="hidden md:block absolute -top-8 -right-8 pointer-events-none rotate-6 z-20">
-      <svg width="45" height="45" viewBox="0 0 50 50" fill="none">
-        <path d="M 36 6 Q 20 18 10 38 L 20 37 M 10 38 L 8 26" stroke="#4fa5f5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-  )}
+  {
+    card.id === "linkedin" && (
+      <div class="hidden md:block absolute -top-8 -right-8 pointer-events-none rotate-6 z-20">
+        <svg width="45" height="45" viewBox="0 0 50 50" fill="none">
+          <path
+            d="M 36 6 Q 20 18 10 38 L 20 37 M 10 38 L 8 26"
+            stroke="#4fa5f5"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    )
+  }
 
-  {card.id === "hire" && (
-    <div class="hidden md:block absolute -left-10 top-1/2 -translate-y-1/2 pointer-events-none z-20">
-      <svg width="45" height="35" viewBox="0 0 50 35" fill="none">
-        <path d="M 5 6 L 36 22 L 28 28 M 36 22 L 34 10" stroke="#ff69a6" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-  )}
+  {
+    card.id === "hire" && (
+      <div class="hidden md:block absolute -left-10 top-1/2 -translate-y-1/2 pointer-events-none z-20">
+        <svg width="45" height="35" viewBox="0 0 50 35" fill="none">
+          <path
+            d="M 5 6 L 36 22 L 28 28 M 36 22 L 34 10"
+            stroke="#ff69a6"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    )
+  }
 
-  {card.id === "projects" && (
-    <div class="hidden md:block absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none z-20">
-      <svg width="45" height="35" viewBox="0 0 50 35" fill="none">
-        <path d="M 40 8 L 14 24 L 22 28 M 14 24 L 18 12" stroke="#fed61a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-  )}
+  {
+    card.id === "projects" && (
+      <div class="hidden md:block absolute -right-10 top-1/2 -translate-y-1/2 pointer-events-none z-20">
+        <svg width="45" height="35" viewBox="0 0 50 35" fill="none">
+          <path
+            d="M 40 8 L 14 24 L 22 28 M 14 24 L 18 12"
+            stroke="#fed61a"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    )
+  }
 
-  {card.id === "games" && (
-    <div class="hidden md:block absolute -left-9 top-1/2 -translate-y-1/2 pointer-events-none z-20">
-      <svg width="35" height="40" viewBox="0 0 40 45" fill="none">
-        <path d="M 12 5 Q 8 26 26 32 L 18 36 M 26 32 L 24 22" stroke="#a78bfa" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-  )}
+  {
+    card.id === "games" && (
+      <div class="hidden md:block absolute -left-9 top-1/2 -translate-y-1/2 pointer-events-none z-20">
+        <svg width="35" height="40" viewBox="0 0 40 45" fill="none">
+          <path
+            d="M 12 5 Q 8 26 26 32 L 18 36 M 26 32 L 24 22"
+            stroke="#a78bfa"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    )
+  }
 
-  {card.id === "cv" && (
-    <div class="hidden md:block absolute -right-9 top-1 pointer-events-none z-20">
-      <svg width="45" height="40" viewBox="0 0 50 45" fill="none">
-        <path d="M 38 6 Q 26 20 10 32 L 20 34 M 10 32 L 14 20" stroke="#42e796" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </div>
-  )}
+  {
+    card.id === "cv" && (
+      <div class="hidden md:block absolute -right-9 top-1 pointer-events-none z-20">
+        <svg width="45" height="40" viewBox="0 0 50 45" fill="none">
+          <path
+            d="M 38 6 Q 26 20 10 32 L 20 34 M 10 32 L 14 20"
+            stroke="#42e796"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    )
+  }
 
   <!-- The Neo-brutalist clickable card -->
   <a
     href={card.url}
-    target={card.url.startsWith("http") || card.url.endsWith(".pdf") ? "_blank" : undefined}
+    target={card.url.startsWith("http") || card.url.endsWith(".pdf")
+      ? "_blank"
+      : undefined}
     rel="noopener noreferrer"
     class="neo-card group relative flex items-center gap-4 px-5 py-3.5 sm:py-4 select-none w-full"
     style={{ backgroundColor: card.bg }}
   >
     <!-- Icon container -->
     <div class="relative shrink-0 w-14 h-14 flex items-center justify-center">
-      {card.id === "hire" && (
-        <div class="absolute inset-0 rounded-full bg-amber-300/50 blur-md scale-125 -z-0 pointer-events-none animate-pulse" />
-      )}
+      {
+        card.id === "hire" && (
+          <div class="absolute inset-0 rounded-full bg-amber-300/50 blur-md scale-125 -z-0 pointer-events-none animate-pulse" />
+        )
+      }
       <img
         src={card.icon}
         alt={card.title}
@@ -84,24 +136,30 @@ const { card, showPointer = false } = Astro.props;
 
     <!-- Text container -->
     <div class="flex-1 min-w-0">
-      <h2 class="text-black font-extrabold text-lg sm:text-[19px] tracking-tight leading-tight truncate">
+      <h2
+        class="text-black font-extrabold text-lg sm:text-[19px] tracking-tight leading-tight truncate"
+      >
         {card.title}
       </h2>
-      <p class="text-black/85 font-medium text-xs sm:text-sm mt-0.5 leading-snug line-clamp-2">
+      <p
+        class="text-black/85 font-medium text-xs sm:text-sm mt-0.5 leading-snug line-clamp-2"
+      >
         {card.subtitle}
       </p>
     </div>
 
-    {showPointer && (
-      <div class="absolute -bottom-4 -right-3 z-30 pointer-events-none transition-transform duration-200 group-hover:translate-x-1 group-hover:translate-y-1">
-        <img
-          src="/doodle_pointer_clean.png"
-          alt="Click here"
-          width="48"
-          height="48"
-          class="w-11 h-11 object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
-        />
-      </div>
-    )}
+    {
+      showPointer && (
+        <div class="absolute -bottom-4 -right-3 z-30 pointer-events-none transition-transform duration-200 group-hover:translate-x-1 group-hover:translate-y-1">
+          <img
+            src="/doodle_pointer_clean.png"
+            alt="Click here"
+            width="48"
+            height="48"
+            class="w-11 h-11 object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]"
+          />
+        </div>
+      )
+    }
   </a>
 </div>
